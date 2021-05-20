@@ -9,7 +9,7 @@ clean() {
 
 install_all() {
   for d in */ ; do
-    cd "$d" || exit
+    cd "$d" || exit 1
     makepkg -si
     cd ..
   done
@@ -17,7 +17,7 @@ install_all() {
 
 build_all() {
   for d in */ ; do
-    cd "$d" || exit
+    cd "$d" || exit 1
     makepkg -si
     cd ..
   done
