@@ -4,7 +4,7 @@ if [ -z "$MH_PKG_PATH" ]; then
   export MH_PKG_PATH="$( cd -- "$(dirname "${0}")" >/dev/null 2>&1 ; pwd -P )"
 fi
 
-clean() {
+clean_all() {
   for d in */; do
     if [ "$d" = "lib/" ]; then
       continue
@@ -51,7 +51,7 @@ help() {
   echo "The valid commands are:"
   echo "- install [package]: Builds and installs a package from a directory's PKGBUILD."
   echo "- build [package]: Builds a package from a directory's PKGBUILD."
-  echo "- clean: Cleans all downloaded and generated files."
+  echo "- clean_all: Cleans all downloaded and generated files."
   echo "- install_all: Builds and installs every package."
   echo "- build_all: Builds every package."
   echo "- lib: Don't do anything (declares the functions)."
@@ -59,7 +59,7 @@ help() {
 }
 
 main() {
-  if [ "${1}" = "clean" ]; then
+  if [ "${1}" = "clean_all" ]; then
     clean
     exit 0
   fi
