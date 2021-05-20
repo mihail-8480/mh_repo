@@ -89,7 +89,7 @@ main() {
     exit 0
   fi
 
-  echo "${0}: invalid command."
+  echo "${0}: invalid command: ${1}"
   echo "Try '${0} help' for more information."
   exit 1
 }
