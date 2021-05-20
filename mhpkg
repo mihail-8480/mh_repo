@@ -16,15 +16,17 @@ clean_all() {
 }
 
 install() {
+  prev=$PWD
   cd "${1}" || exit 1
   makepkg -si
-  cd ..
+  cd "$prev"
 }
 
 build() {
+  prev=$PWD
   cd "${1}" || exit 1
   makepkg -f
-  cd ..
+  cd "$prev"
 }
 
 install_all() {
