@@ -1,4 +1,4 @@
 pkgname='mhserv'
 pkgdesc="A relatively simple multi-platform C HTTP server."
 depends=('mh')
-source "../lib/common.sh"
+source "../lib/c/common.sh"
