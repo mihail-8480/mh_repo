@@ -4,7 +4,6 @@ pkg/*
 src/
 src/*
 src
-*/*/
 *.pkg.*
 .idea/
 install_manifest.txt
