@@ -1,8 +1,3 @@
-get_version() {
-  curl -s https://raw.githubusercontent.com/mihail-8480/mh/master/CMakeLists.txt | grep "VERSION " | sed -n 2p | xargs | cut  -d' ' -f2
-}
-
-pkgver=$(get_version || echo 0.0.0)
 pkgrel=0
 epoch=1
 arch=("$(uname -m)")

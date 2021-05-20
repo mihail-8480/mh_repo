@@ -4,6 +4,6 @@ if [ -z "$MH_PKG_PATH" ]; then
 fi
 source "$MH_PKG_PATH/lib/package.sh"
 setup_git "github.com" "mihail-8480"
-setup_package "mh" "A C library that is supposed to make my life easier."
+setup_package "mh" "A C library that is supposed to make my life easier." "$(mh_version)"
 depends=('glibc')
 use_cmake

@@ -4,6 +4,6 @@ if [ -z "$MH_PKG_PATH" ]; then
 fi
 source "$MH_PKG_PATH/lib/package.sh"
 setup_git "github.com" "mihail-8480"
-setup_package "mhserv" "A relatively simple multi-platform C HTTP server."
+setup_package "mhserv" "A relatively simple multi-platform C HTTP server." "$(mh_version)"
 depends=('mh')
 use_cmake
