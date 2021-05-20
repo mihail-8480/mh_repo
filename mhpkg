@@ -60,7 +60,7 @@ help() {
 
 main() {
   if [ "${1}" = "clean_all" ]; then
-    clean
+    clean_all
     exit 0
   fi
 
