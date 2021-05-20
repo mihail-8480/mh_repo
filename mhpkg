@@ -10,28 +10,6 @@ clean() {
   done
 }
 
-install_all() {
-  for d in */ ; do
-    if [ "$d" = "lib/" ]; then
-      continue
-    fi
-    cd "$d" || exit 1
-    makepkg -si
-    cd ..
-  done
-}
-
-build_all() {
-  for d in */ ; do
-    if [ "$d" = "lib/" ]; then
-      continue
-    fi
-    cd "$d" || exit 1
-    makepkg -f
-    cd ..
-  done
-}
-
 install() {
   cd "$1" || exit 1
   makepkg -si
@@ -42,6 +20,24 @@ build() {
   cd "$1" || exit 1
   makepkg -f
   cd ..
+}
+
+install_all() {
+  for d in */ ; do
+    if [ "$d" = "lib/" ]; then
+      continue
+    fi
+    install "$d"
+  done
+}
+
+build_all() {
+  for d in */ ; do
+    if [ "$d" = "lib/" ]; then
+      continue
+    fi
+    build "$d"
+  done
 }
 
 help() {
