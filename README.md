@@ -1,10 +1,10 @@
-# mh_repo
+# mhrepo
 A repository of packages that are connected to my libmh project for Arch Linux.
 
 ## Installation
 ```sh
-git clone https://github.com/mihail-8480/mh_repo
-cd mh_repo
+git clone https://github.com/mihail-8480/mhrepo
+cd mhrepo
 ```
 
 ### If you want to install a specific package:
