@@ -4,6 +4,9 @@ if [ -z "$MH_PKG_PATH" ]; then
   export MH_PKG_PATH="$( cd -- "$(dirname "${0}")" >/dev/null 2>&1 ; pwd -P )"
 fi
 
+source "$MH_PKG_PATH/lib/mhpkg.conf"
+source "$MH_PKG_PATH/lib/$MH_PKG_BACKEND.sh"
+
 clean_all() {
   for d in */; do
     if [ "$d" = "lib/" ]; then
@@ -13,20 +16,6 @@ clean_all() {
     find "$d" ! -name "$(echo "$d" | sed 's:/*$::')" -type d -exec rm -rf {} +
     rm -rf "$d$d"
   done
-}
-
-install() {
-  prev=$PWD
-  cd "${1}" || exit 1
-  makepkg -si
-  cd "$prev"
-}
-
-build() {
-  prev=$PWD
-  cd "${1}" || exit 1
-  makepkg -f
-  cd "$prev"
 }
 
 install_all() {
