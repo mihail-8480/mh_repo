@@ -12,3 +12,5 @@ build() {
   makepkg -f
   cd "$prev"
 }
+
+export MH_PKG_SOURCE="$MH_PKG_PATH/lib/$MH_PKG_BACKEND/package.sh"

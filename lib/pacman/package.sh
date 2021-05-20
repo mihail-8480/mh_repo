@@ -10,7 +10,7 @@ setup_package() {
 }
 
 use_cmake() {
-  source "$MH_PKG_PATH/lib/c/cmake.sh"
+  source "$MH_PKG_PATH/lib/pacman/cmake.sh"
 }
 
 mh_git_version() {
