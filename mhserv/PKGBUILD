@@ -1,27 +1,4 @@
-pkgver=0.3.0
-pkgrel=0
-epoch=1
 pkgname='mhserv'
-url="https://github.com/mihail-8480/mhserv"
 pkgdesc="A relatively simple multi-platform C HTTP server."
-arch=("$(uname -m)")
-license=('MIT')
-depends=('libmh')
-makedepends=('cmake' 'gcc' 'make' 'git')
-source=("git://github.com/mihail-8480/mhserv.git")
-md5sums=('SKIP')
-
-build() {
-    cd "$srcdir/mhserv"
-    cmake -B . \
-        -DCMAKE_BUILD_TYPE='Release' \
-        -DCMAKE_INSTALL_PREFIX='/usr' \
-        -Wno-dev
-    make -C .
-}
-
-package() {
-    cd "$srcdir/mhserv"
-    DESTDIR="$pkgdir" cmake --install .
-}
-
+depends=('mh')
+source "../common.sh"
