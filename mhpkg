@@ -84,7 +84,7 @@ main() {
     exit 0
   fi
 
-  echo "${0}: missing command."
+  echo "${0}: invalid command."
   echo "Try '${0} help' for more information."
   exit 1
 }
