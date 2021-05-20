@@ -9,8 +9,8 @@ arch=("$(uname -m)")
 license=('MIT')
 makedepends=('cmake' 'gcc' 'make' 'git')
 md5sums=('SKIP')
-url="https://github.com/mihail-8480/$pkgname"
-source=("git://github.com/mihail-8480/$pkgname.git")
+url="https://$MH_GIT_SERVER/$MH_GIT_USERNAME/$pkgname"
+source=("git://$MH_GIT_SERVER/$MH_GIT_USERNAME/$pkgname.git")
 
 
 build() {

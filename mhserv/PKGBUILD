@@ -1,4 +1,5 @@
-pkgname='mhserv'
-pkgdesc="A relatively simple multi-platform C HTTP server."
+source "$MH_PKG_PATH/lib/package.sh"
+setup_git "github.com" "mihail-8480"
+setup_package "mhserv" "A relatively simple multi-platform C HTTP server."
 depends=('mh')
-source "../lib/c/common.sh"
+use_cmake
