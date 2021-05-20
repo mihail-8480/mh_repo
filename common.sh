@@ -1,18 +1,16 @@
 pkgver=0.3.0
 pkgrel=0
 epoch=1
-pkgname='libmh'
-url="https://github.com/mihail-8480/mh"
-pkgdesc="A C library that is supposed to make my life easier."
 arch=("$(uname -m)")
 license=('MIT')
-depends=('glibc')
 makedepends=('cmake' 'gcc' 'make' 'git')
-source=("git://github.com/mihail-8480/mh.git")
 md5sums=('SKIP')
+url="https://github.com/mihail-8480/$pkgname"
+source=("git://github.com/mihail-8480/$pkgname.git")
+
 
 build() {
-    cd "$srcdir/mh"
+    cd "$srcdir/$pkgname" || exit 1
     cmake -B . \
         -DCMAKE_BUILD_TYPE='Release' \
         -DCMAKE_INSTALL_PREFIX='/usr' \
@@ -21,7 +19,7 @@ build() {
 }
 
 package() {
-    cd "$srcdir/mh"
+    cd "$srcdir/$pkgname" || exit 1
     DESTDIR="$pkgdir" cmake --install .
 }
 
