@@ -8,10 +8,13 @@ source "$MH_PKG_PATH/lib/mhpkg.conf"
 source "$MH_PKG_PATH/lib/$MH_PKG_BACKEND/$MH_PKG_BACKEND.sh"
 
 clean() {
+  echo "Cleaning '${1}'..."
   if [ -f "${1}/PKGBUILD" ]; then
     find "${1}" ! -name 'PKGBUILD' -type f -exec rm -f {} +
     find "${1}" ! -name "$(echo "${1}" | sed 's:/*$::')" -type d -exec rm -rf {} +
-     rm -rf "${1}${1}"
+    rm -rf "${1}${1}"
+  else
+    echo "This is not a package directory, ingoing command."
   fi
 }
 

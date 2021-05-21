@@ -1,5 +1,6 @@
 #!/bin/sh
 install() {
+  echo "Building and installing '${1}'..."
   prev=$PWD
   cd "${1}" || exit 1
   makepkg -si
@@ -7,6 +8,7 @@ install() {
 }
 
 build() {
+  echo "Building '${1}'..."
   prev=$PWD
   cd "${1}" || exit 1
   makepkg -f
