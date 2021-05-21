@@ -5,7 +5,7 @@ A repository of packages that are connected to my libmh project for Arch Linux.
 ```shell
 git clone https://github.com/mihail-8480/mhrepo
 git clone https://github.com/mihail-8480/mhpkg mhpkg.tmp
-alias mhpkg=mhpkg.tmp/mhpkg 
+alias mhpkg=../mhpkg.tmp/mhpkg 
 cd mhrepo
 ```
 
