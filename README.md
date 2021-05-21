@@ -1,6 +1,6 @@
 # mhrepo
-A repository of packages that are connected to my libmh project for Arch Linux.
-
+A repository of packages for mhpkg.
+ 
 ## How to get?
 ```shell
 git clone https://github.com/mihail-8480/mhrepo
