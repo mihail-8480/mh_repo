@@ -14,3 +14,8 @@ cd mhrepo
 
 ## Usage
 See [`mhpkg`](https://github.com/mihail-8480/mhpkg) for instructions.
+
+If you want to install everything execute:
+```shell
+mhpkg install_all
+```
