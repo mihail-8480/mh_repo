@@ -9,8 +9,8 @@ source "$MH_PKG_PATH/lib/$MH_PKG_BACKEND/$MH_PKG_BACKEND.sh"
 
 clean() {
   echo "Cleaning '${1}'..."
-  if [ -f "${1}/PKGBUILD" ]; then
-    find "${1}" ! -name 'PKGBUILD' -type f -exec rm -f {} +
+  if [ -f "${1}/package.mhpkg" ]; then
+    find "${1}" ! -name 'package.mhpkg' -type f -exec rm -f {} +
     find "${1}" ! -name "$(echo "${1}" | sed 's:/*$::')" -type d -exec rm -rf {} +
     rm -rf "${1}${1}"
   else
@@ -51,7 +51,7 @@ help() {
   echo "The valid commands are:"
   echo "- clean [package]: Cleans all downloaded and generated files in a package's directory."
   echo "- install [package]: Builds and installs a package from a directory's PKGBUILD."
-  echo "- build [package]: Builds a package from a directory's PKGBUILD."
+  echo "- build [package]: Builds a package from a directory's package.mhpkg."
   echo "- clean_all: Cleans all downloaded and generated files."
   echo "- install_all: Builds and installs every package."
   echo "- build_all: Builds every package."

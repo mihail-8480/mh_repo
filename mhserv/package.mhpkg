@@ -1,7 +1,3 @@
-if [ -z "$MH_PKG_PATH" ]; then
-    echo "Cannot be built normally using makepkg, use 'mhpkg install' instead."
-    exit 1
-fi
 source "$MH_PKG_SOURCE"
 setup_git "github.com" "mihail-8480"
 setup_package "mhserv" "A relatively simple multi-platform C HTTP server." "$(mh_version)"
