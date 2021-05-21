@@ -1,0 +1,6 @@
+setup_git "github.com" "mihail-8480"
+setup_package "mhpkg" "My personal package build system." "$(mh_version)"
+add_dependency "sh"
+set_copy_destination /usr/bin
+set_copy_source bin
+copy_git_files
