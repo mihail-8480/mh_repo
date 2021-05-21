@@ -4,8 +4,11 @@ arch=("$(uname -m)")
 license=('MIT')
 makedepends=('cmake' 'gcc' 'make' 'git')
 md5sums=('SKIP')
-url="https://$MH_GIT_SERVER/$MH_GIT_USERNAME/$pkgname"
-source=("git://$MH_GIT_SERVER/$MH_GIT_USERNAME/$pkgname.git")
+if [ -z "$MH_GIT_REPO" ]; then
+  export MH_GIT_REPO=$pkgname
+fi
+url="https://$MH_GIT_SERVER/$MH_GIT_USERNAME/$MH_GIT_REPO"
+source=("git://$MH_GIT_SERVER/$MH_GIT_USERNAME/$MH_GIT_REPO.git")
 
 
 build() {

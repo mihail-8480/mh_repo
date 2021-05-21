@@ -11,6 +11,6 @@ add_dependency() {
   depends+=(${1})
 }
 
-use_cmake() {
+build_using_cmake_and_git() {
   source "$MH_PKG_PATH/lib/pacman/cmake.sh"
 }

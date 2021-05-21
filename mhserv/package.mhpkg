@@ -2,4 +2,4 @@ source "$MH_PKG_SOURCE"
 setup_git "github.com" "mihail-8480"
 setup_package "mhserv" "A relatively simple multi-platform C HTTP server." "$(mh_version)"
 add_dependency "mh"
-use_cmake
+build_using_cmake_and_git

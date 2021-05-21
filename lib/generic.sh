@@ -9,4 +9,5 @@ mh_version() {
 setup_git() {
   export MH_GIT_SERVER=${1}
   export MH_GIT_USERNAME=${2}
+  export MH_GIT_REPO=${3}
 }
