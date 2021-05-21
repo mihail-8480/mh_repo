@@ -1,7 +1,7 @@
 # mhrepo
 A repository of packages that are connected to my libmh project for Arch Linux.
 
-## Installation
+## How to get?
 ```shell
 git clone https://github.com/mihail-8480/mhrepo
 
@@ -12,8 +12,7 @@ alias mhpkg=../mhpkg.tmp/bin/mhpkg
 cd mhrepo
 ```
 
-## Usage
-See [`mhpkg`](https://github.com/mihail-8480/mhpkg) for instructions.
+See [`mhpkg`](https://github.com/mihail-8480/mhpkg) for more advanced instructions.
 
 If you want to install everything execute:
 ```shell
